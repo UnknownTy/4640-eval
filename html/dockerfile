@@ -1,6 +1,10 @@
 FROM nginx
 
+# Copy static frontend files
 RUN mkdir /html
 COPY . /html
 
+EXPOSE 80
+
+# Use templates to assign root and app URL
 COPY ./templates /etc/nginx/templates

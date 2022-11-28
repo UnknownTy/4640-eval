@@ -1,9 +1,11 @@
 FROM python
 
+# Only requirement
 RUN pip install flask
 
 RUN mkdir /app
 COPY . /app
 WORKDIR /app
 
+# Initialize using script to set runtime environment
 CMD [ "bash", "boot.sh"]
