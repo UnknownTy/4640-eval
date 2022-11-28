@@ -7,12 +7,12 @@ services:
       - "8080:80"
     environment:
       - API_URL=http://app:5000
-      - nginx_root=/html
+      - NGINX_ROOT=/html
     depends_on:
       - app
   app:
     build:
       context: app
     environment:
-      - STUDENT_NAME="Tiras Gimpel"
-      - STUDENT_ID="A01241239"
+      - STUDENT_NAME=Tiras Gimpel
+      - STUDENT_ID=A01241239
