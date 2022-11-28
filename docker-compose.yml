@@ -2,7 +2,7 @@ version: '3'
 
 services:
   html:
-    build: html
+    image: unknownty/4640eval-html:latest
     ports:
       - "8080:80"
     environment:
@@ -11,8 +11,7 @@ services:
     depends_on:
       - app
   app:
-    build:
-      context: app
+    image: unknownty/4640eval-app:latest
     environment:
       - STUDENT_NAME=Tiras Gimpel
       - STUDENT_ID=A01241239
