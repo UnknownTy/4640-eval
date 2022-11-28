@@ -1,0 +1,7 @@
+FROM nginx
+
+RUN mkdir /html
+COPY index.html /html
+COPY static /html
+
+COPY ./templates /etc/nginx/templates

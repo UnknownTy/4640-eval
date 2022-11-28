@@ -1,0 +1,9 @@
+FROM python
+
+RUN pip install flask
+
+RUN mkdir /app
+COPY . /app
+WORKDIR /app
+
+CMD [ "bash", "boot.sh"]
